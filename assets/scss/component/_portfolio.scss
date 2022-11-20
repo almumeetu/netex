@@ -1,0 +1,92 @@
+@use "../abstract" as *;
+/*PORTFOLIO CSS Start HERE */
+
+
+.portfolio__area{
+	& .portfolio__menu-area{
+		text-align: center;
+		& h2{
+			color: #362f2d;
+			font-size: 36px;
+			margin-bottom: 30px;
+			font-weight: 500;
+		}
+		& .portfolio__menu{
+				margin-bottom: 50px;
+			& button{
+				color: #777777;
+				font-size: 17px;
+				border: 0;
+				background: transparent;
+				margin-right: 19px;
+				margin-left: 19px;
+				padding: 10px;
+				cursor: pointer;
+				transition: all 0.5s;
+				font-weight: 500;
+				& .active,
+				&:hover {
+					color: red;	
+				}
+			}
+
+			
+		}
+	}
+	& .portfolio__item {
+		& .portfolio-img{
+			overflow: hidden;
+			& a{
+				& img{
+	
+				}
+			}
+
+		}
+		& .portfolio-content{
+			& p{
+				font-size: 17px;
+				color: #362f2d;
+				font-weight: 400;
+				padding-right: 90px;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+			}
+			& span{
+				font-size: 18px;
+				line-height: 40px;
+				font-weight: 700;
+				color: #45103e;
+			}
+			& .rating-list{
+				& a{
+					color: #ffcc00;
+				}
+			}
+		}
+	}
+	& .portfolio-overlay{
+            top: 50%;
+            left: -27px;
+            right: 0;
+            padding: 0;
+            width: 100%;
+            visibility: visible;
+            opacity: 1;
+			transition: all .3s;
+			& .overlay-content{
+				& a{
+					padding: 15px;
+					border: 1px solid #f9e7d4;
+					background: #fff;
+					color: #51204b;
+
+				}
+			}
+	}
+}
+
+
+
+
+/*PORTFOLIO CSS END HERE */

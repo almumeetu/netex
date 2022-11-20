@@ -1,0 +1,131 @@
+@use "../abstract" as *;
+.header-area{
+    & .header-top-area{
+        background: #4f17fe;
+        padding-top: 12px;
+        & .header-mail{
+            & a{
+                color: #d5cdff;
+            }
+        }
+        & .header-mid{
+            & p{
+                color: #d5cdff;
+            }
+        }
+        & .social-icon{
+            & a{
+                color: #9574fe;
+                margin-right: 26px;
+                font-weight: 600;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .header-mid-area{
+        margin-top: 25px;
+        & .logo{}
+        & .header-search-bar{
+            margin-bottom: 25px;
+            & form{
+                position: relative;
+                & input{
+                    background: #fff;
+                    height: 49px;
+                    padding: 20px;
+                    width: 100%;
+                    border: 1px solid #e0e0e0;
+                    color: #436372;
+                    &::placeholder{
+                        color: #436372;
+                    }
+                }
+                & button{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    // height: 100%;
+                    // width: 50px;
+                    border: 0;
+                    color: #949494;
+                    background: transparent;
+                    & i{
+                        background: #4f17fe;
+                        padding:14px 15px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        & .login-icon{
+            & a{
+                margin-right: 30px;
+            }
+        }
+    }
+
+}
+ .header-bottom-area{
+    border-top: 1px solid #e0e0e0;
+    & .browse-categories{
+        & .bc-title{
+            background: #fd2e38;
+            padding: 15px;
+            font-weight: 500;
+            & i{
+                margin-right: 7px;
+                color: #fff; 
+            }
+            & span{
+                color: #fff;
+            }
+        }
+        & .bc-content {
+            padding: 15px;
+            border: 1px solid #f6f3ff;
+            font-weight: 500;
+            color: #436372;
+            transition: 0.3s;
+            &:hover{
+                background: #fd2e38;
+                color: #fff;
+            }
+            & img{
+                margin-right: 7px;
+            }
+        }
+    }
+    & .main-menu{
+        padding-top: 15px;
+        & nav {
+            & ul{
+                & li{
+                    display: inline-block;
+                    margin-right: 30px;
+                    & a{
+                        color: #436372;
+                        font-size: 16px;
+                        font-weight: 600;
+                        transition: 0.3s;
+                        &:hover{
+                            color: #4f17fe;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .header-contact{
+        & a{
+            & img{
+                margin-right: 5px;
+            }
+            & span{
+                color:#436372 ;
+                font-weight: 600;
+            }
+        }
+    }
+}

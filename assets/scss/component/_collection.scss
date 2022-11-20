@@ -1,0 +1,43 @@
+@use "../abstract" as *;
+.shop-colection{
+    & .colection{
+        padding: 40px;
+        & .colection-item{
+            & p{
+                background: #fdb633;
+                padding: 5px 15px;
+                width: 100px;
+                color: #fff;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+            & h3{
+                font-size: 30px;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 60px;
+            }
+            & a{
+                color: #fff;
+                font-size: 16px;
+                padding: 0;
+                margin: 0;
+                transition: 0.3s;
+                &:hover{
+                    color: #4f17fe;
+                }
+                & i{
+                    margin-right: 8px;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+        & .colection-thumb{
+            & img{
+                width: 100%;
+            }
+        }
+    }
+}
+

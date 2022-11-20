@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+.application-area{
+    & .application{
+        padding: 10px 40px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        &.application-content{
+            & h3{
+
+            }
+            & p{
+
+            }
+            & .downlod-store{
+
+            }
+        }
+        & .application-thumb{
+            & img{
+                margin-top: -40px;
+            }
+        }
+    }
+}

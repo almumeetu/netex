@@ -1,0 +1,30 @@
+@use "../abstract" as *;
+.hero-banner{
+    padding: 50px;
+    background: #f6f3ff;
+    & .hero-content{
+        & h2{
+            font-size: 72px;
+            color: #243f4d;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        & p{
+            font-size: 20px;
+            color: #436372;
+            margin-bottom: 30px;
+        }
+        & .shop-btn {
+            width: 33%;
+            background: #4f17fe;
+            color: #fff;
+            padding: 13px 25px;
+            border-radius: 3px;
+            font-weight: 500;
+            transition: 0.3s;
+            &:hover{
+                background: #fd2e38;
+            }
+        }
+    }
+}
