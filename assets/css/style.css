@@ -890,6 +890,10 @@ p {
   color: #919191;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 .header-area .header-top-area {
   background: #4f17fe;
   padding-top: 12px;
@@ -1014,7 +1018,7 @@ p {
   margin-bottom: 30px;
 }
 .hero-banner .hero-content .shop-btn {
-  width: 33%;
+  width: 40%;
   background: #4f17fe;
   color: #fff;
   padding: 13px 25px;
@@ -1090,8 +1094,57 @@ p {
 .portfolio__area .portfolio__menu-area .portfolio__menu button .active, .portfolio__area .portfolio__menu-area .portfolio__menu button:hover {
   color: red;
 }
+.portfolio__area .portfolio__item {
+  position: relative;
+}
 .portfolio__area .portfolio__item .portfolio-img {
-  overflow: hidden;
+  position: relative;
+}
+.portfolio__area .portfolio__item .portfolio-img::before {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio__area .portfolio__item:hover ::before {
+  opacity: 1;
+  visibility: visible;
+}
+.portfolio__area .portfolio__item:hover .portfolio-overlay {
+  opacity: 1;
+  visibility: visible;
+  padding-bottom: 30px;
+}
+.portfolio__area .portfolio__item .portfolio-overlay {
+  position: absolute;
+  left: -25px;
+  right: 0;
+  bottom: 35%;
+  padding: 30px 40px;
+  padding-bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.portfolio__area .portfolio__item .portfolio-overlay .overlay-content a {
+  padding: 15px;
+  border: 1px solid #f9e7d4;
+  background: #fff;
+  color: #51204b;
+  transition: 0.3s;
+}
+.portfolio__area .portfolio__item .portfolio-overlay .overlay-content a:hover {
+  border-color: #4f17fe;
+  background: #4f17fe;
+  color: #fff;
 }
 .portfolio__area .portfolio__item .portfolio-content p {
   font-size: 17px;
@@ -1110,31 +1163,176 @@ p {
 .portfolio__area .portfolio__item .portfolio-content .rating-list a {
   color: #ffcc00;
 }
-.portfolio__area .portfolio-overlay {
-  top: 50%;
-  left: -27px;
-  right: 0;
-  padding: 0;
-  width: 100%;
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.3s;
-}
-.portfolio__area .portfolio-overlay .overlay-content a {
-  padding: 15px;
-  border: 1px solid #f9e7d4;
-  background: #fff;
-  color: #51204b;
-}
 
 /*PORTFOLIO CSS END HERE */
 .application-area .application {
-  padding: 10px 40px;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
+.application-area .application .application-content {
+  padding-left: 150px;
+  padding-right: 60px;
+}
+.application-area .application .application-content h3 {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 400;
+}
+.application-area .application .application-content p {
+  color: #fff;
+  margin-bottom: 25px;
+}
 .application-area .application .application-thumb img {
   margin-top: -40px;
+}
+
+.best-sellers-area .section-menu h4 {
+  font-size: 29px;
+  font-weight: 500;
+}
+.best-sellers-area .section-menu .menu ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.best-sellers-area .section-menu .menu ul li:last-child {
+  margin-right: 0px;
+}
+.best-sellers-area .section-menu .menu ul li a {
+  padding: 7px 10px;
+  color: #565872;
+  transition: 0.5s;
+  font-weight: 500;
+}
+.best-sellers-area .section-menu .menu ul li a:hover {
+  border: 1px solid #565872;
+}
+.best-sellers-area .seller-item .item {
+  padding: 25px 10px;
+  border: 1px solid #e0e0e0;
+  transition: 0.3s;
+  position: relative;
+}
+.best-sellers-area .seller-item .item:hover {
+  border-color: blue;
+}
+.best-sellers-area .seller-item .item .seller-thumb {
+  position: relative;
+}
+.best-sellers-area .seller-item .item .seller-thumb a img {
+  width: 100%;
+}
+.best-sellers-area .seller-item .item .seller-thumb::before {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.best-sellers-area .seller-item .item:hover ::before {
+  opacity: 1;
+  visibility: visible;
+}
+.best-sellers-area .seller-item .item:hover .thumb-overlay {
+  opacity: 1;
+  visibility: visible;
+  padding-bottom: 30px;
+}
+.best-sellers-area .seller-item .item .thumb-overlay {
+  position: absolute;
+  left: 13%;
+  right: 0;
+  bottom: 30%;
+  background: #fd2e38;
+  color: #fff;
+  height: 60px;
+  width: 60px;
+  font-size: 26px;
+  border-radius: 50%;
+  padding: 17px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.best-sellers-area .seller-item .item .thumb-overlay:hover {
+  background: #4f17fe;
+}
+.best-sellers-area .seller-item .item .seller-content {
+  margin-left: 25px;
+}
+.best-sellers-area .seller-item .item .seller-content h4 {
+  font-size: 16px;
+  color: #45103e;
+  font-weight: 400;
+}
+.best-sellers-area .seller-item .item .seller-content .rating-list a i {
+  color: #ffcc00;
+}
+.best-sellers-area .seller-item .item .seller-content span {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #45103e;
+}
+
+.netex-bar {
+  background: #fd2e38;
+}
+.netex-bar .bar-left h3 {
+  font-size: 36px;
+  color: #fff;
+}
+.netex-bar .bar-social a {
+  margin-right: 15px;
+  padding: 15px 20px;
+  background: #fd434c;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 16px;
+  color: #fff;
+  transition: 0.5s;
+}
+.netex-bar .bar-social a:last-child {
+  margin-right: 0px;
+}
+.netex-bar .bar-social a:hover {
+  background: #fff;
+  color: #fd2e38;
+}
+
+.footer-area {
+  background: #f6f3ff;
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+.footer-area .footer .footer-item .footer-title h4 {
+  font-size: 18px;
+  color: #45103e;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.footer-area .footer .footer-item .footer-content span {
+  font-size: 16px;
+  color: #8a698a;
+}
+
+.copyright-area {
+  border-top: 1px solid #d3c6d8;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  background: #f6f3ff;
+}
+.copyright-area .c-left p {
+  color: #683d65;
+}
+.copyright-area .c-right p {
+  color: #683d65;
 }
 
 /*# sourceMappingURL=style.css.map */

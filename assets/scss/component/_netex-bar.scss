@@ -1,0 +1,29 @@
+@use "../abstract" as *;
+.netex-bar{
+    background: #fd2e38;
+    & .bar-left{
+        & h3{
+            font-size: 36px;
+            color: #fff;
+        }
+    }
+    & .bar-social{
+        & a{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0px;
+            }
+            padding: 15px 20px;
+            background: #fd434c;
+            border-radius: 50%;
+            font-size: 20px;
+            line-height: 16px;
+            color: #fff;
+            transition: 0.5s;
+            &:hover{
+                background: #fff;
+                color: #fd2e38;
+            }
+        }
+    }
+}

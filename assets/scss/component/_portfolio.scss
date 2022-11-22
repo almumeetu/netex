@@ -2,18 +2,21 @@
 /*PORTFOLIO CSS Start HERE */
 
 
-.portfolio__area{
-	& .portfolio__menu-area{
+.portfolio__area {
+	& .portfolio__menu-area {
 		text-align: center;
-		& h2{
+
+		& h2 {
 			color: #362f2d;
 			font-size: 36px;
 			margin-bottom: 30px;
 			font-weight: 500;
 		}
-		& .portfolio__menu{
-				margin-bottom: 50px;
-			& button{
+
+		& .portfolio__menu {
+			margin-bottom: 50px;
+
+			& button {
 				color: #777777;
 				font-size: 17px;
 				border: 0;
@@ -24,27 +27,86 @@
 				cursor: pointer;
 				transition: all 0.5s;
 				font-weight: 500;
+
 				& .active,
 				&:hover {
-					color: red;	
+					color: red;
 				}
 			}
 
-			
+
 		}
 	}
+
 	& .portfolio__item {
-		& .portfolio-img{
-			overflow: hidden;
-			& a{
-				& img{
-	
+		position: relative;
+
+		& .portfolio-img {
+			position: relative;
+
+			& a {
+				& img {
 				}
 			}
 
+			&::before {
+				position: absolute;
+				background: rgba(0, 0, 0, 0.1);
+				content: "";
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+				transition: 0.3s;
+				opacity: 0;
+				visibility: hidden;
+
+			}
+
 		}
-		& .portfolio-content{
-			& p{
+		&:hover{
+			& ::before{
+				opacity: 1;
+				visibility: visible;
+			}
+			& .portfolio-overlay{
+				opacity: 1;
+				visibility: visible;
+				padding-bottom: 30px;
+			}
+		}
+
+		& .portfolio-overlay {
+			position: absolute;
+            left: -25px;
+            right: 0;
+            bottom: 35%;
+            padding: 30px 40px;
+            padding-bottom: 10px;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+			& .overlay-content {
+				& a {
+					padding: 15px;
+					border: 1px solid #f9e7d4;
+					background: #fff;
+					color: #51204b;
+					transition: 0.3s;
+					&:hover{
+						border-color: #4f17fe;
+						background: #4f17fe;
+						color: #fff;
+					}
+
+				}
+			}
+		}
+
+		& .portfolio-content {
+			& p {
 				font-size: 17px;
 				color: #362f2d;
 				font-weight: 400;
@@ -52,38 +114,22 @@
 				padding-bottom: 0px;
 				margin-bottom: 0px;
 			}
-			& span{
+
+			& span {
 				font-size: 18px;
 				line-height: 40px;
 				font-weight: 700;
 				color: #45103e;
 			}
-			& .rating-list{
-				& a{
+
+			& .rating-list {
+				& a {
 					color: #ffcc00;
 				}
 			}
 		}
 	}
-	& .portfolio-overlay{
-            top: 50%;
-            left: -27px;
-            right: 0;
-            padding: 0;
-            width: 100%;
-            visibility: visible;
-            opacity: 1;
-			transition: all .3s;
-			& .overlay-content{
-				& a{
-					padding: 15px;
-					border: 1px solid #f9e7d4;
-					background: #fff;
-					color: #51204b;
 
-				}
-			}
-	}
 }
 
 

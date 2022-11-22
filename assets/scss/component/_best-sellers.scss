@@ -1,0 +1,128 @@
+@use "../abstract" as *;
+
+.best-sellers-area {
+    & .section-menu {
+        & h4 {
+            font-size: 29px;
+            font-weight: 500;
+        }
+
+        & .menu {
+            & ul {
+                & li {
+                    display: inline-block;
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+
+                    & a {
+                        padding: 7px 10px;
+                        color: #565872;
+                        transition: 0.5s;
+                        font-weight: 500;
+
+                        &:hover {
+                            border: 1px solid #565872;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .seller-item {
+        & .item {
+            padding: 25px 10px;
+            border: 1px solid #e0e0e0;
+            transition: 0.3s;
+            position: relative;
+            &:hover{
+                border-color: blue;
+            }
+            & .seller-thumb {
+                position: relative;
+                & a {
+                    & img {
+                        width: 100%;
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.0);
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                    transition: 0.3s;
+                    opacity: 0;
+                    visibility: hidden;
+    
+                }
+            }
+            &:hover{
+                & ::before{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                & .thumb-overlay{
+                    opacity: 1;
+                    visibility: visible;
+                    padding-bottom: 30px;
+                }
+            }
+            & .thumb-overlay{
+                position: absolute;
+                left: 13%;
+                right: 0;
+                bottom: 30%;
+                background: #fd2e38;
+                color: #fff;
+                height: 60px;
+                width: 60px;
+                font-size: 26px;
+                border-radius: 50%;
+                padding: 17px;
+                z-index: 2;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s;
+                &:hover{
+                    background: #4f17fe;
+                }
+            }
+
+            & .seller-content {
+                margin-left: 25px;
+
+                & h4 {
+                    font-size: 16px;
+                    color: #45103e;
+                    font-weight: 400;
+                }
+
+                & .rating-list {
+                    & a {
+                        & i {
+                            color: #ffcc00;
+                            ;
+                        }
+                    }
+                }
+
+                & span {
+                    font-size: 18px;
+                    line-height: 40px;
+                    font-weight: 700;
+                    color: #45103e;
+                }
+
+            }
+        }
+
+    }
+
+}

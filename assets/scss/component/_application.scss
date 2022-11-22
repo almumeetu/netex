@@ -2,15 +2,19 @@
 
 .application-area{
     & .application{
-        padding: 10px 40px;
         background-position: 0 0;
         background-repeat: no-repeat;
-        &.application-content{
+        & .application-content{
+            padding-left: 150px;
+            padding-right: 60px;
             & h3{
-
+                font-size: 28px;
+                color: #fff;
+                font-weight: 400;
             }
             & p{
-
+                color: #fff;
+                margin-bottom: 25px;
             }
             & .downlod-store{
 
