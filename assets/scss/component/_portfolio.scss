@@ -49,20 +49,7 @@
 				}
 			}
 
-			&::before {
-				position: absolute;
-				background: rgba(0, 0, 0, 0.1);
-				content: "";
-				left: 0;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				z-index: 1;
-				transition: 0.3s;
-				opacity: 0;
-				visibility: hidden;
-
-			}
+			
 
 		}
 		&:hover{

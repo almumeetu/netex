@@ -1,0 +1,81 @@
+@use "../abstract" as *;
+
+.testimonial-area {
+    & .testimonial-bc {
+        background: #e5e5e5;
+
+        & .testimonial-title {
+            & h3 {
+                font-size: 36px;
+                color: #fff;
+                font-weight: 500;
+            }
+            & .arrow{
+                & i{
+                    font-size: 18px;
+                    font-weight: 400;
+                    padding: 18px 24px;
+                    background: #775bee;
+                    color: #fff;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    &:hover{
+                        background: #fd2e38;
+                    }
+                }
+            }
+        }
+    }
+
+    & .testimonial {
+        margin-top: -70px;
+
+        & .testimonial-content {
+            position: relative;
+            padding: 60px 40px;
+            padding-bottom: 20px;
+            background: #fff;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1);
+
+            & p {
+                padding-bottom: 20px;
+                color: #5e5957;
+                font-weight: 400;
+            }
+        }
+
+        & .t-overview {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0px;
+
+        }
+
+        & .testimonial-author {
+
+            padding: 40px 30px;
+            padding-top: 40px;
+
+            & .author-thumb {
+                & img {}
+            }
+        }
+
+        & .author-content {
+            margin-left: 25px;
+            padding-top: 5px;
+
+            & h4 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #000;
+            }
+
+            & span {
+                color: #5e5957;
+                font-weight: 500;
+            }
+        }
+    }
+}
