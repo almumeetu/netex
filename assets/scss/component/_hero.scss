@@ -8,6 +8,18 @@
             color: #243f4d;
             font-weight: 500;
             margin-bottom: 15px;
+            @media #{$md} {
+                font-size: 60px;
+            }
+            @media #{$sm} {
+                font-size: 50px;
+            }
+            @media #{$xs} {
+                font-size: 50px;
+            }
+            @media #{$xxs} {
+                font-size: 35px;
+            }
         }
         & p{
             font-size: 20px;

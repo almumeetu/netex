@@ -24,6 +24,12 @@
                 background: #fff;
                 color: #fd2e38;
             }
+            @media #{$xs} {
+                margin-right: 8px;
+                padding: 8px 12px;
+                font-size: 15px;
+                line-height: 1px;
+            }
         }
     }
 }

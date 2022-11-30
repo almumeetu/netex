@@ -7,6 +7,12 @@
         & .application-content{
             padding-left: 150px;
             padding-right: 60px;
+            @media #{$sm,$xs,$xxs} {
+                padding-left: 0;
+                padding-right: 0;
+                padding: 20px;
+            }
+
             & h3{
                 font-size: 28px;
                 color: #fff;
@@ -23,6 +29,9 @@
         & .application-thumb{
             & img{
                 margin-top: -40px;
+            }
+            @media #{$lg,$md,$xxs} {
+               display: none; 
             }
         }
     }

@@ -348,13 +348,6 @@ p {
   visibility: visible;
 }
 
-@media (max-width: 575px) {
-  .progress-wrap {
-    right: 15px;
-    bottom: 15px;
-  }
-}
-
 /* link btn */
 .link-btn {
   position: relative;
@@ -898,6 +891,11 @@ p {
   background: #4f17fe;
   padding-top: 12px;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px), (max-width:450px) {
+  .header-area .header-top-area {
+    display: none;
+  }
+}
 .header-area .header-top-area .header-mail a {
   color: #d5cdff;
 }
@@ -918,6 +916,11 @@ p {
 }
 .header-area .header-mid-area .header-search-bar {
   margin-bottom: 25px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px), (max-width:450px) {
+  .header-area .header-mid-area .header-search-bar {
+    margin-top: 20px;
+  }
 }
 .header-area .header-mid-area .header-search-bar form {
   position: relative;
@@ -951,6 +954,11 @@ p {
   padding-left: 18px;
   border-left: 1px solid #e0e0e0;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px), (max-width:450px) {
+  .header-area .header-mid-area .header-icon {
+    margin-top: 20px;
+  }
+}
 .header-area .header-mid-area .header-icon:first-child {
   border: none;
 }
@@ -960,10 +968,14 @@ p {
 .header-bottom-area {
   border-top: 1px solid #e0e0e0;
 }
+.header-bottom-area .browse-categories {
+  transition: 0.5s;
+}
 .header-bottom-area .browse-categories .bc-title {
   background: #fd2e38;
   padding: 15px;
   font-weight: 500;
+  transition: 0.5s;
 }
 .header-bottom-area .browse-categories .bc-title i {
   margin-right: 7px;
@@ -977,7 +989,7 @@ p {
   border: 1px solid #f6f3ff;
   font-weight: 500;
   color: #436372;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .header-bottom-area .browse-categories .bc-content:hover {
   background: #fd2e38;
@@ -1019,6 +1031,26 @@ p {
   color: #243f4d;
   font-weight: 500;
   margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-banner .hero-content h2 {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .hero-banner .hero-content h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-banner .hero-content h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width:450px) {
+  .hero-banner .hero-content h2 {
+    font-size: 35px;
+  }
 }
 .hero-banner .hero-content p {
   font-size: 20px;
@@ -1102,11 +1134,25 @@ p {
 .portfolio__area .portfolio__menu-area .portfolio__menu button .active, .portfolio__area .portfolio__menu-area .portfolio__menu button:hover {
   color: red;
 }
-.portfolio__area .portfolio__item {
-  position: relative;
-}
 .portfolio__area .portfolio__item .portfolio-img {
   position: relative;
+  width: 280px;
+  height: 235px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.portfolio__area .portfolio__item .portfolio-img p {
+  padding: 0px 10px;
+  background: #fd2e38;
+  color: #fff;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+.portfolio__area .portfolio__item .portfolio-img .sale {
+  background: #4f17fe;
 }
 .portfolio__area .portfolio__item:hover ::before {
   opacity: 1;
@@ -1119,15 +1165,17 @@ p {
 }
 .portfolio__area .portfolio__item .portfolio-overlay {
   position: absolute;
-  left: -25px;
+  left: 0;
   right: 0;
-  bottom: 35%;
-  padding: 30px 40px;
+  bottom: 28%;
   padding-bottom: 10px;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+}
+.portfolio__area .portfolio__item .portfolio-overlay .overlay-content {
+  margin-top: 10px;
 }
 .portfolio__area .portfolio__item .portfolio-overlay .overlay-content a {
   padding: 15px;
@@ -1140,6 +1188,9 @@ p {
   border-color: #4f17fe;
   background: #4f17fe;
   color: #fff;
+}
+.portfolio__area .portfolio__item .portfolio-content {
+  margin-top: 50px;
 }
 .portfolio__area .portfolio__item .portfolio-content p {
   font-size: 17px;
@@ -1168,6 +1219,13 @@ p {
   padding-left: 150px;
   padding-right: 60px;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px), (max-width:450px) {
+  .application-area .application .application-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 20px;
+  }
+}
 .application-area .application .application-content h3 {
   font-size: 28px;
   color: #fff;
@@ -1179,6 +1237,11 @@ p {
 }
 .application-area .application .application-thumb img {
   margin-top: -40px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width:450px) {
+  .application-area .application .application-thumb {
+    display: none;
+  }
 }
 
 .best-sellers-area .section-menu h4 {
@@ -1355,7 +1418,7 @@ p {
 .blog-area .blog .blog-thumb .blog-content {
   background: #fff;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.1);
-  width: 330px;
+  width: 90%;
   padding: 30px 10px;
   margin: 0 auto;
   position: absolute;
@@ -1408,11 +1471,22 @@ p {
   background: #fff;
   color: #fd2e38;
 }
+@media (max-width: 575px) {
+  .netex-bar .bar-social a {
+    margin-right: 8px;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1px;
+  }
+}
 
 .footer-area {
   background: #f6f3ff;
   padding-top: 100px;
   padding-bottom: 50px;
+}
+.footer-area .footer .footer-item {
+  margin-bottom: 30px;
 }
 .footer-area .footer .footer-item .footer-title h4 {
   font-size: 18px;

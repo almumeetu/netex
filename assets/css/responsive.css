@@ -1,0 +1,104 @@
+
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-contact{
+        display: none;
+    }
+    .hero-banner .hero-content h2{
+        font-size: 60px;
+    }
+    .hero-banner .hero-content .shop-btn {
+        width: 45%;
+        padding: 13px 18px;
+    }
+    .application-thumb{
+        display: none;
+    }
+    .application-area .application .application-content{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 180px
+    }
+}
+
+ 
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-img {
+        display: none;
+    }
+    .header-contact{
+        display: none;
+    }
+    .hero-banner .hero-content .shop-btn {
+        width: 45%;
+        padding: 13px 18px;
+    }
+    .application-thumb{
+        display: none;
+    }
+    .application-area .application .application-content{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 180px
+    }
+
+}
+
+ 
+/* Extra small Device. */
+@media (max-width: 767px) {
+
+}
+    
+    /* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .hero-img {
+        display: none;
+    }
+    .application-thumb{
+        display: none;
+    }
+    .application-area .application .application-content{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 180px
+    }
+    .header-contact{
+        display: none;
+    }
+    .netex-bar .bar-social a {
+        margin-right: 8px;
+        padding: 8px 12px;
+        font-size: 15px;
+        line-height: 1px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+
+    .hero-img {
+        display: none;
+    }
+    .portfolio-img{
+        height: 0;
+        width: 0;
+    }
+    .application-thumb{
+        display: none;
+    }
+    .application-area .application .application-content{
+    
+
+    }
+    .application-area .application .application-content h3{
+        font-size: 19px;
+    }
+    .header-contact{
+        display: none;
+    }
+    .hero-banner .hero-content h2{
+        font-size: 60px;
+    }
+}

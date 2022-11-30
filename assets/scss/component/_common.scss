@@ -329,12 +329,7 @@ p {
 
 // progress wrap
 
-.progress-wrap {
-	@media #{$xs} {
-		right: 15px;
-		bottom: 15px;
-	}
-}
+
 
 /* link btn */
 
@@ -688,6 +683,7 @@ p {
 	}
 }
 .section-title {
+	
 	position: relative;
 	z-index: 2;
 }
